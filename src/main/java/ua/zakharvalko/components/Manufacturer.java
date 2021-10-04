@@ -10,10 +10,15 @@ public class Manufacturer extends Component{
 
     public void manufacture(){
         if(!manufacturingTrouble) {
-        mediator.startProcess("Manufacturing is finished!", this);
+            startProcess("Manufacturing is finished!", this);
         } else {
             mediator.errorMessage("Manufacturing process has troubles");
         }
+    }
+
+    @Override
+    public void startProcess(String msg, Component component){
+        mediator.startProcess(msg, component);
     }
 
 }

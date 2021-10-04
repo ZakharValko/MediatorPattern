@@ -8,7 +8,11 @@ public class TechnicalTaskCreator extends Component {
     private Mediator mediator;
 
     public void createTechTask(){
-        mediator.startProcess("Technical task is created!", this);
+        startProcess("Technical task is created!", this);
     }
 
+    @Override
+    public void startProcess(String msg, Component component) {
+        mediator.startProcess(msg, component);
+    }
 }

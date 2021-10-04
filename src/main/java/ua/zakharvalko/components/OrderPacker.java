@@ -11,4 +11,8 @@ public class OrderPacker extends Component{
         mediator.startProcess("Order is packed!", this);
     }
 
+    @Override
+    public void startProcess(String msg, Component component) {
+        mediator.startProcess(msg, component);
+    }
 }

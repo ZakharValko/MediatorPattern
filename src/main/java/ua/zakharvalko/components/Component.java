@@ -15,4 +15,8 @@ public abstract class Component {
     public Component(Mediator mediator){
         this.mediator = mediator;
     }
+
+    public void startProcess(String msg, Component component){
+        mediator.startProcess(msg, component);
+    }
 }
